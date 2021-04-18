@@ -4,6 +4,7 @@ from scrapy.http import Request
 from ehsy.items import EhsyItem
 
 #https://github.com/caoxinyu/RedisClient
+#https://github.com/microsoftarchive/redis/releases
 class EhsyspiderSpider(RedisSpider):
     name = 'ehsyspider'
     allowed_domains = ['ehsy.com']
