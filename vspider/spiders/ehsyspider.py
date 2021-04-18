@@ -8,6 +8,11 @@ class EhsyspiderSpider(RedisSpider):
     name = 'ehsyspider'
     allowed_domains = ['ehsy.com']
     # start_urls = ['http://www.ehsy.com/']
+    custom_settings = {
+        'ITEM_PIPELINES':{
+            'ehsy.pipelines.EhsyPipeline': 200,
+        }
+    }
     redis_key = "ehsyspider:start_urls"
 
 
